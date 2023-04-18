@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className='flex justify-between px-8 py-3  text-light drop-shadow-[0_5px_5px_rgba(0,0,0,0.75)]'>
       <Link to='/' className='flex justify-center gap-2 font-bold text-xl tracking-widest items-center drop-shadow-3xl'><SiChef className='text-6xl  '/>Cookify </Link>
 
-      <div className='flex flex-row justify-center relative rounded-3xl bg-light pe-8 '>
+      <div className='flex flex-row justify-center relative rounded-3xl bg-light pe-8 hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out'>
             <BiSearchAlt2 className=' self-center top-1/2  text-darkGreen font-bold text-3xl mx-2 cursor-pointer'/>
             <input type="text" className='bg-light text-dark text-lg focus:outline-0	'  />
       </div>
