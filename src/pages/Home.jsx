@@ -8,7 +8,7 @@ import Footer from '../components/Footer'
 const Home = () => {
   return (
     <main className=' overflow-hidden '>
-      <div className='bg-bgImage bg-no-repeat bg-origin-border  bg-cover pt-20'>
+      <div className='bg-bgImage bg-no-repeat bg-origin-border  bg-cover pt-32'>
         <SliderCuisines />
         <Hero />
       </div>

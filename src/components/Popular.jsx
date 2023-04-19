@@ -40,42 +40,42 @@ const Popular = () => {
           time={'30'}
           image={dish}
         />
- <PopularCard
+        <PopularCard
           heading={'Pumpkin Ravioli - Seasonal Garnish'}
           time={'30'}
           image={dish}
         />
- <PopularCard
+        <PopularCard
           heading={'Pumpkin Ravioli - Seasonal Garnish'}
           time={'30'}
           image={dish}
         />
- <PopularCard
+        <PopularCard
           heading={'Pumpkin Ravioli - Seasonal Garnish'}
           time={'30'}
           image={dish}
         />
- <PopularCard
+        <PopularCard
           heading={'Pumpkin Ravioli - Seasonal Garnish'}
           time={'30'}
           image={dish}
         />
- <PopularCard
+        <PopularCard
           heading={'Pumpkin Ravioli - Seasonal Garnish'}
           time={'30'}
           image={dish}
         />
- <PopularCard
+         <PopularCard
           heading={'Pumpkin Ravioli - Seasonal Garnish'}
           time={'30'}
           image={dish}
         />
- <PopularCard
+         <PopularCard
           heading={'Pumpkin Ravioli - Seasonal Garnish'}
           time={'30'}
           image={dish}
         />
- <PopularCard
+        <PopularCard
           heading={'Pumpkin Ravioli - Seasonal Garnish'}
           time={'30'}
           image={dish}
