@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-    <main className='h-full  w-screen bg-bgImage bg-no-repeat bg-origin-border  bg-cover font-sans '>
+    <main className='h-full  w-screen  font-sans '>
       <Navbar />
       <Outlet />
       <Footer />

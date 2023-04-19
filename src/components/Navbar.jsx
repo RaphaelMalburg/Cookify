@@ -7,16 +7,18 @@ import {FaUser} from 'react-icons/fa'
 
 const Navbar = () => {
   return (
-    <div className='flex justify-between px-8 py-3  text-light drop-shadow-[0_5px_5px_rgba(0,0,0,0.75)]'>
-      <Link to='/' className='flex justify-center gap-2 font-bold text-xl tracking-widest items-center drop-shadow-3xl'><SiChef className='text-6xl  '/>Cookify </Link>
-
-      <div className='flex flex-row justify-center relative rounded-3xl bg-light pe-8 hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out'>
-            <BiSearchAlt2 className=' self-center top-1/2  text-darkGreen font-bold text-3xl mx-2 cursor-pointer'/>
-            <input type="text" className='bg-light text-dark text-lg focus:outline-0	'  />
+    <div className='grid grid-cols-2 md:grid-cols-3 px-8 py-3 absolute top-0 w-full text-light drop-shadow-[0_5px_5px_rgba(0,0,0,0.75)]'>
+      <div className='flex justify-center gap-2 font-bold text-xl tracking-widest items-center drop-shadow-3xl'>
+        <SiChef className='text-6xl  '/>Cookify
       </div>
-      <div className='flex flex-row justify-center '>
-        <FaUser className='self-center text-3xl cursor-pointer'  />
-        <Link to='/login' className='self-end pb-3 text-xl px-3 font-semibold tracking-wide'>Login </Link>
+      <div className='md:order-last flex flex-row justify-center'>
+        <Link to='/login' className='self-end pb-3 text-xl px-3 font-semibold tracking-wide'>
+          <FaUser className='self-center text-3xl '  />
+        </Link>
+      </div>
+      <div className='flex flex-row justify-start relative rounded-3xl bg-light md:pe-8 hover:scale-x-110 hover:scale-y-105 md:w-auto w-14 pe-4 transition duration-300 ease-out md:col-start-2 md:col-end-3'>
+        <BiSearchAlt2 className='self-center  text-darkGreen font-bold text-3xl  mx-4 cursor-pointer '/>
+        <input type="text" className='bg-light text-dark text-lg focus:outline-0 md:w-auto rounded-3xl w-4'  />
       </div>
     </div>
   )

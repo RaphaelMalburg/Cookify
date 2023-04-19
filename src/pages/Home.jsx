@@ -8,8 +8,11 @@ import Footer from '../components/Footer'
 const Home = () => {
   return (
     <main className=' overflow-hidden '>
-      <SliderCuisines />
-      <Hero />
+      <div className='bg-bgImage bg-no-repeat bg-origin-border  bg-cover pt-20'>
+        <SliderCuisines />
+        <Hero />
+      </div>
+
       <Popular />
       <Jumbotron />
 
