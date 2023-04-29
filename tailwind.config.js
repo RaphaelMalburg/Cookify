@@ -8,8 +8,8 @@ module.exports = {
       'darkGreen': '#2F4F2F',
       'dark': '#121416',
       'light': '#FCEFF9',
-      'gold': '#E09200',
-      'bg-transparent':	'rgba(0,0,0,. 5)',
+      'gold': '#E09200,'
+
     },
     extend: {
       backgroundImage:(theme)=>({

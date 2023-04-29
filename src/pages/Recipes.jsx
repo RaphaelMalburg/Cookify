@@ -1,19 +1,16 @@
 import React from 'react'
 import image from './../assets/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg'
+import RecipesDetails from '../components/RecipesDetails'
+import Navbar from '../components/Navbar'
+import Related from '../components/Related'
 
 const Recipes = () => {
   return (
     <>
-    <div>
-    <h1>title of the Meal Types tag used</h1>
+    <div className='pt-32'>
 
-      <div className='w-40'>
-        <img src={image} alt="" />
-      </div>
-      <h2>Gnocchi chorizo</h2>
-      <h3>author of recipe</h3>
-      <p>max REady time with icon watch</p>
-      <button>like button when is logged</button>
+      <RecipesDetails  />
+      <Related />
     </div>
     </>
   )

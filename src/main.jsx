@@ -4,7 +4,7 @@ import App from './App'
 import './index.css'
 import {createBrowserRouter, RouterProvider, Navigate} from 'react-router-dom'
 import Recipes from './pages/Recipes'
-import RecipesDetails from './pages/RecipesDetails'
+import RecipesDetails from './components/RecipesDetails'
 import Home from './pages/Home'
 import ErrorPage from './pages/ErrorPage'
 import Login from './pages/Login'
@@ -18,10 +18,7 @@ const router = createBrowserRouter([
         path:'/',
         element: <Home />,
       },
-      {
-        path:'recipes',
-        element: <Recipes />,
-      },
+
       {
         path:'login',
         element: <Login />,
@@ -29,7 +26,7 @@ const router = createBrowserRouter([
       //rotas aninhadas . nested routes - unique identifier
       {
         path:'recipes/:id',
-        element:<RecipesDetails />,
+        element:<Recipes />,
       },
 
     ],
