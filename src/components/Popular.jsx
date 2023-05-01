@@ -19,7 +19,7 @@ const Popular = () => {
   const buttonStyle = 'outline outline-offset-2 outline-1 items-center rounded-xl shadow-2xl  cursor-pointer  overflow-hidden transform hover:opacity-50  transition duration-300 ease-out font-semibold font tracking-wider text-darkGreen text-xl px-4 py-2 '
 
   const getPopular = async (query) => {
-    const api = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${query}&number=10`, options)
+    const api = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${' '}&number=10&type=${query}`, options)
     const data = await api.json()
 
     localStorage.setItem(query, JSON.stringify(data.results))

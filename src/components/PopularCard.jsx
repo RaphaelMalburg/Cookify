@@ -6,7 +6,7 @@ const PopularCard = ({image, heading, path}) => {
 
 <div className="w-full bg-white border relative  border-darkGreen scale-75 h-80 rounded-lg shadow dark:bg-darkGreen dark:border-darkGreen ">
     <Link to={path} className='-z-20'>
-        <img className="rounded-t-lg  w-full" src={image} alt="" />
+        <img className="rounded-t-lg w-full h-full object-cover " src={image} alt="" />
     </Link>
 
 

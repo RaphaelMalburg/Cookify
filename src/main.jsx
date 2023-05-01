@@ -8,6 +8,8 @@ import RecipesDetails from './components/RecipesDetails'
 import Home from './pages/Home'
 import ErrorPage from './pages/ErrorPage'
 import Login from './pages/Login'
+import Searched from './pages/Searched'
+import CuisineSearch from './pages/CuisinesSearch'
 
 const router = createBrowserRouter([
   {
@@ -28,7 +30,18 @@ const router = createBrowserRouter([
         path:'recipes/:id',
         element:<Recipes />,
       },
-
+      {
+        path:'searched/:id',
+        element:<Searched />,
+      },
+      {
+        path:'searched/:id/recipes/:id',
+        element:<Recipes />,
+      },
+      {
+        path:'cuisinesearch/:id',
+        element:<CuisineSearch />,
+      },
     ],
   },
 ])
