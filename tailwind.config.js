@@ -4,11 +4,18 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
     colors:{
-      'lightGreen': '#6B8E23',
+      'lightGreen': '#457345',
       'darkGreen': '#2F4F2F',
       'dark': '#121416',
       'light': '#FCEFF9',
-      'gold': '#E09200,'
+      'gold': '#E09200',
+      'green50':'#5D6E5D',
+      'green40':'#779B77',
+      'green30':'#8AA88A',
+      'green20':'#B5CEB5',
+      'brown': '#D5C4B4',
+      'error': '##ff3333',
+
 
     },
     extend: {

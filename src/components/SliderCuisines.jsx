@@ -3,6 +3,7 @@ import imageTagSlider from '../constants/cuisineTypes'
 import { Link, NavLink, useParams } from 'react-router-dom'
 import '@splidejs/react-splide/css';
 import { Splide,SplideSlide } from '@splidejs/react-splide'
+import Skeleton from 'react-loading-skeleton';
 
 
 
@@ -60,10 +61,10 @@ const SliderCuisines = () => {/*
         <SplideSlide key={data.title} className='relative py-5 rounded-full ' >
           <Link to={`cuisinesearch/${data.title}`} className='grid place-items-center hover:opacity-80  rounded-full object-fit  mx-2'>
             <img
-            src={data.image}
+            src={data.image  || <Skeleton />}
             alt={`dish from ${data.title}`} className=' object-cover h-36 w-36 contrast-50 rounded-full drop-shadow-[0_5px_5px_rgba(0,0,0,0.75)]  '/>
             <p className='absolute font-semibold text-xl tracking-wider drop-shadow-[0_5px_5px_rgba(0,0,0,0.75)]'>
-              {data.title}
+              {data.title || <Skeleton />}
             </p>
 
           </Link>

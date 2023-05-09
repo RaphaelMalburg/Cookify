@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import Skeleton from 'react-loading-skeleton'
 import { useNavigate, useParams } from 'react-router-dom'
+import "react-loading-skeleton/dist/skeleton.css"
 
 const RecipesDetails = () => {
   const { id } = useParams()
@@ -35,18 +37,18 @@ const RecipesDetails = () => {
   }
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto w-full  -mt-7">
 
-      <div className="flex justify-center">
+      <div className="flex justify-center pt-10">
         <div className="w-2/3">
-          <img className="rounded-lg shadow-md" src={recipe.image} alt={recipe.title} />
+          <img className="rounded-lg shadow-md" src={recipe.image  || <Skeleton />} alt={recipe.title} />
         </div>
       </div>
-      <div className="flex justify-center">
-        <div className="w-2/3 my-8">
-          <h1 className="text-3xl font-bold">{recipe.title}</h1>
+      <div className="flex justify-center ">
+        <div className="w-2/3 my-8  ">
+          <h1 className="text-3xl font-bold">{recipe.title  || <Skeleton />}</h1>
           <hr className="my-4 border-2 border-gray-400" />
-          <div className="flex flex-wrap justify-center">
+          <div className="flex flex-wrap justify-center  rounded-xl bg-green30">
             <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
               <h2 className="text-xl font-bold mb-2">Ingredients</h2>
               <hr className="my-2 border-2 border-gray-400" />
@@ -54,15 +56,15 @@ const RecipesDetails = () => {
                 {recipe.extendedIngredients &&
                   recipe.extendedIngredients.map((ingredient, index) => (
                     <li key={index}>
-              <strong>{`${ingredient.amount} ${ingredient.unit}- `}</strong>{`${ingredient.name}  `}
+              <strong>{`${ingredient.amount  || <Skeleton />} ${ingredient.unit  || <Skeleton />}- `}</strong>{`${ingredient.name  || <Skeleton />}  `}
             </li>
                   ))}
               </ul>
             </div>
-            <div className="w-full sm:w-1/2 md:w-2/3 lg:w-3/4 p-2">
+            <div className="w-full sm:w-1/2 md:w-2/3 lg:w-3/4 p-2 ">
               <h2 className="text-xl font-bold mb-2">Instructions</h2>
               <hr className="my-2 border-2 border-gray-400" />
-              <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={createMarkup(recipe.instructions)}></p>
+              <p className="text-lg leading-relaxed" dangerouslySetInnerHTML={createMarkup(recipe.instructions )  || <Skeleton />}></p>
             </div>
           </div>
         </div>

@@ -1,6 +1,9 @@
 
 import React, { useEffect, useState } from 'react'
 import PopularCard from './PopularCard';
+import Skeleton from 'react-loading-skeleton';
+import "react-loading-skeleton/dist/skeleton.css"
+import PopularCardSkeleton from './PopularCardSkeleton';
 
 const Popular = () => {
   const [popular, setPopular] = useState([])
@@ -47,11 +50,13 @@ const Popular = () => {
   }, [activeButton])
 
   return (
-    <div>
-      <h1 className='text-6xl flex font-bold tracking-wide justify-center py-4 text-darkGreen drop-shadow-[0_5px_5px_rgba(0,0,0,0.35)]'>Popular menus</h1>
-      <div className='gap-6 flex justify-center'>
+    <div className='bg-light' >
+      <h1 className='text-6xl flex font-bold tracking-wide justify-center py-4 pb-10 text-darkGreen drop-shadow-[0_5px_5px_rgba(0,0,0,0.35)]'>Popular menus</h1>
+      <div className='gap-6 flex justify-center '>
         {cuisineTypes.map((cuisineType, index) => (
+
           <button
+
             key={index}
             className={cuisineType === activeButton ? activeButtonStyle : buttonStyle}
             onClick={() => handleButtonClick(cuisineType)}
@@ -62,12 +67,13 @@ const Popular = () => {
       </div>
 
       <div className='grid 2xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
+       {/* <PopularCardSkeleton cards={10}/>*/}
         {popular.map((recipe) => (
           <div key={recipe.id}>
             <PopularCard
-              heading={recipe.title}
+              heading={recipe.title  || <Skeleton />}
               path={`recipes/${recipe.id}`}
-              image={recipe.image}
+              image={recipe.image  || <Skeleton />}
             />
           </div>
         ))}

@@ -42,6 +42,10 @@ const router = createBrowserRouter([
         path:'cuisinesearch/:id',
         element:<CuisineSearch />,
       },
+      {
+        path:'cuisinesearch/:id/recipes/:id',
+        element:<Recipes />,
+      },
     ],
   },
 ])

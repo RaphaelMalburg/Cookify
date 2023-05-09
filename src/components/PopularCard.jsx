@@ -1,18 +1,19 @@
 import React from 'react'
-
+import Skeleton from 'react-loading-skeleton'
+import "react-loading-skeleton/dist/skeleton.css"
 import { Link } from 'react-router-dom'
 const PopularCard = ({image, heading, path}) => {
   return (
 
 <div className="w-full bg-white border relative  border-darkGreen scale-75 h-80 rounded-lg shadow dark:bg-darkGreen dark:border-darkGreen ">
     <Link to={path} className='-z-20'>
-        <img className="rounded-t-lg w-full h-full object-cover " src={image} alt="" />
+        <img className="rounded-t-lg w-full h-full object-cover " src={image  || <Skeleton />} alt="" />
     </Link>
 
 
     <div className="p-5 backdrop-blur-lg absolute bottom-0 right-0 z-20 h-auto w-full">
 
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-light dark:text-white truncate drop-shadow-[0_5px_5px_rgba(0,0,0,0.35)]">{heading}</h5>
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-light dark:text-white truncate drop-shadow-[0_5px_5px_rgba(0,0,0,0.35)]">{heading  || <Skeleton />}</h5>
 
         <Link to={path} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-light text-white bg-darkGreen rounded-lg hover:bg-lightGreen focus:ring-2 focus:outline-none focus:ring-darkGreen dark:bg-darkGreen dark:hover:bg-lightGreen dark:focus:ring-bg-lightGreen">
             See more
