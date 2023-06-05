@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import RegistrationForm from "./RegistrationForm";
 
 const Login = () => {
   return (
-    <div>Login</div>
-  )
-}
+    <div>
+      <RegistrationForm />
+    </div>
+  );
+};
 
-export default Login
+export default Login;

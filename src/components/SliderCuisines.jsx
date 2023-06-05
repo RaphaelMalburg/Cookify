@@ -6,35 +6,6 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Skeleton from "react-loading-skeleton";
 
 const SliderCuisines = () => {
-  /*
-  const [popular, setPopular] = useState([])
-  const params = useParams()
-
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
-      'X-RapidAPI-Host': 'spoonacular-recipe-food-nutrition-v1.p.rapidapi.com'
-    }
-  };
-  const getPopular = async (query) => {
-    const api = await fetch(`https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/complexSearch?query=${query}&number=10`, options)
-    const data = await api.json()
-
-    localStorage.setItem(query, JSON.stringify(data.results))
-    console.log('foi para o cache')
-    setPopular(data.results)
-  }
-
-  useEffect(() => {
-    const cachedResults = localStorage.getItem(popular)
-    console.log('puxou info do cache')
-    if (cachedResults) {
-      setPopular(JSON.parse(cachedResults))
-    } else {
-      getPopular(params)
-    } &cuisine=italian
-  }, [])*/
   return (
     <>
       <Splide
@@ -47,23 +18,23 @@ const SliderCuisines = () => {
               perPage: 6,
             },
             640: {
-              perPage: 4,
+              perPage: 3,
             },
             400: {
-              perPage: 3,
+              perPage: 2,
             },
           },
         }}>
         {imageTagSlider.map((data) => {
           return (
-            <SplideSlide key={data.title} className="relative py-5 rounded-full ">
+            <SplideSlide key={data.title} className="relative py-5  rounded-full ">
               <Link to={`cuisinesearch/${data.title}`} className="grid place-items-center hover:opacity-80  rounded-full object-fit  mx-2">
                 <img
                   src={data.image || <Skeleton />}
                   alt={`dish from ${data.title}`}
-                  className=" object-cover h-36 w-36 contrast-50 rounded-full drop-shadow-[0_5px_5px_rgba(0,0,0,0.75)]  "
+                  className=" object-cover md:h-36 h-24 w-36 contrast-50 rounded-full drop-shadow-[0_5px_5px_rgba(0,0,0,0.75)]  "
                 />
-                <p className="absolute font-semibold text-xl tracking-wider drop-shadow-[0_5px_5px_rgba(0,0,0,0.75)]">{data.title || <Skeleton />}</p>
+                <p className="absolute font-semibold md:text-xl text-lg tracking-wider drop-shadow-[0_5px_5px_rgba(0,0,0,0.75)]">{data.title || <Skeleton />}</p>
               </Link>
             </SplideSlide>
           );

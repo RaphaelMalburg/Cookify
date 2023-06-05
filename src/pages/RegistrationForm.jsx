@@ -85,7 +85,7 @@ const RegistrationForm = () => {
       </p>
 
       <h1 className="text-3xl font-bold text-darkGreen mb-8">Registration Form</h1>
-      <form onSubmit={handleSubmit} className="bg-darkGreen p-10 rounded-lg max-w-md transition ease-in-out delay-150  hover:-translate-y-1 focus:scale-105 duration-300">
+      <form onSubmit={handleSubmit} className="bg-darkGreen p-10 rounded-lg max-w-md w-1/2 transition ease-in-out delay-150  hover:-translate-y-1 focus:scale-105 duration-300">
         <div className="mb-4">
           <label htmlFor="username" className="block text-light  font-bold mb-2">
             Username
