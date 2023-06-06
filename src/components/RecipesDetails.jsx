@@ -39,7 +39,7 @@ const RecipesDetails = () => {
   return (
     <div className="container mx-auto w-full  -mt-7">
       <div className="flex justify-center pt-10">
-        <div className="w-2/3">
+        <div className="w-2/3 lg:-pt-20 pt-20">
           <img className="rounded-lg shadow-md" src={recipe.image} alt={recipe.title} />
         </div>
       </div>

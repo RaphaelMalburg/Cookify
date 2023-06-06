@@ -13,7 +13,7 @@ const Hero = () => {
         <p className="md:text-xl text-md font-bold text-dark">Access 1000+ Recipes and Cook Your Favorite Meals with Ease</p>
 
         <Link to="/allrecipes">
-          <button className="i md:h-16 lg:w-64 w-44 bg-gradient-to-br from-lightGreen to-darkGreen items-center rounded-xl shadow-2xl  cursor-pointer  overflow-hidden transform hover:bg-lightGreen hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out font-bold font tracking-wider text-light md:text-2xl text-lg  ">
+          <button className="i h-14 md:h-20 lg:w-64 w-44 bg-gradient-to-br from-lightGreen to-darkGreen items-center rounded-xl shadow-2xl  cursor-pointer  overflow-hidden transform hover:bg-lightGreen hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out font-bold font tracking-wider text-light md:text-2xl text-lg   ">
             Explore Recipes
           </button>
         </Link>
